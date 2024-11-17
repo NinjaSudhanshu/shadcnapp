@@ -5,9 +5,7 @@ const page = () => {
     return (
         <div>
             Dashboard
-            <Button>
-                Login
-            </Button>
+
 
         </div>
     )

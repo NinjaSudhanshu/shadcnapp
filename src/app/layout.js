@@ -22,10 +22,10 @@ const geistMono = localFont({
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 
-  // Include "/tables" in the sidebar display logic
+  // Include "/home", "/settings", and "/tables" in the sidebar display logic
   const showSidebar =
     pathname.startsWith("/home") ||
-
+    pathname.startsWith("/settings") ||
     pathname.startsWith("/tables");
 
   return (
@@ -41,11 +41,11 @@ export default function RootLayout({ children }) {
         >
           {showSidebar ? (
             <SidebarProvider>
-              {/* Render AppSidebar for both /home and /tables */}
-              {(pathname.startsWith("/home") || pathname.startsWith("/tables")) && <AppSidebar />}
-              <main>
-                {/* Render SidebarTrigger for both /home and /tables */}
-                {(pathname.startsWith("/home") || pathname.startsWith("/tables")) && <SidebarTrigger />}
+              {/* Render AppSidebar for /home, /settings, and /tables */}
+              <AppSidebar />
+              <main className="w-full">
+                {/* Render SidebarTrigger for /home, /settings, and /tables */}
+                <SidebarTrigger />
                 <ModeToggle />
                 {children}
               </main>

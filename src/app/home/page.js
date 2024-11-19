@@ -3,6 +3,7 @@ import DashboardCard from '@/components/card';
 import Chartcode from '@/components/graph';
 import RecentSales from '@/components/recentSales';
 import Menuu from '@/components/menubar';
+import styles from './page.module.css'
 
 const Page = () => {
 
@@ -18,11 +19,10 @@ const Page = () => {
                 <Menuu />
             </div>
             <div className='flex gap-8 justify-between'>
-                <div className='min-w-[800px]'>
-                    {/* <Chartcode /> */}
+                <div className={styles.chart}>
                     <Chartcode />
                 </div>
-                <div className='min-w-[600px]'>
+                <div className={styles.RecentSales} >
                     <RecentSales />
                 </div>
 

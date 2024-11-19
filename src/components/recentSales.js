@@ -13,7 +13,7 @@ const RecentSales = () => {
     ];
 
     return (
-        <div className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-black dark:text-white p-6 rounded-lg max-w-md">
+        <div className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-black dark:text-white p-6 rounded-lg">
             <h2 className="text-xl font-semibold mb-3">Recent Sales</h2>
             <p className="text-gray-600 dark:text-gray-400 mb-4">You made 265 sales this month.</p>
             <ul className="space-y-5">

@@ -1,0 +1,29 @@
+.tableparent {
+
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 18px;
+    margin-top: 28px;
+    margin: 22px;
+
+
+}
+
+.tableheading h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+
+}
+
+
+.statusbutton {
+    border: 1px dashed rgb(71, 71, 71);
+    /* padding: 2px; */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+
+}

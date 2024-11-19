@@ -96,7 +96,7 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={()=>{router.push("/")}}>
+            <DropdownMenuItem onClick={()=>{router.push("/login")}}>
               <LogOut />
               Log out
             </DropdownMenuItem>

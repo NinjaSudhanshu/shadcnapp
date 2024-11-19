@@ -39,37 +39,94 @@ export const columns = [
         enableHiding: false,
     },
     {
-        accessorKey: "status",
-        header: () => <div className="text-right">Status</div>,
+        accessorKey: "id",
+        header: "Task",
         cell: ({ row }) => {
-            const amount = parseFloat(row.getValue("amount"));
-            const formatted = new Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD",
-            }).format(amount);
-
-            return <div className="text-right font-medium">{formatted}</div>;
+            return <div className="font-medium">TASK - {row.getValue("id")}</div>
         },
     },
     {
         accessorKey: "email",
-        header: "Email",
         header: ({ column }) => {
             return (
-                <Button
-                    variant="ghost"
-                    onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-                >
-                    Email
-                    <ArrowUpDown className="ml-2 h-4 w-4" />
-                </Button>
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        <Button variant="ghost">
+                            Email
+                            <ArrowUpDown className="ml-2 h-4 w-4" />
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start">
+                        <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
+                            Asc
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => column.toggleSorting(true)}>
+                            Desc
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem onClick={() => column.toggleVisibility(false)}>
+                            Hide
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
             )
         },
     },
     {
-        accessorKey: "amount",
-        header: "Amount",
+        accessorKey: "status",
+        header: ({ column }) => {
+            return (
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        <Button variant="ghost">
+                            Status
+                            <ArrowUpDown className="ml-2 h-4 w-4" />
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start">
+                        <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
+                            Asc
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => column.toggleSorting(true)}>
+                            Desc
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem onClick={() => column.toggleVisibility(false)}>
+                            Hide
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+            )
+        },
     },
+    {
+        accessorKey: "priority",
+        header: ({ column }) => {
+            return (
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        <Button variant="ghost">
+                            Priority
+                            <ArrowUpDown className="ml-2 h-4 w-4" />
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start">
+                        <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
+                            Asc
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onClick={() => column.toggleSorting(true)}>
+                            Desc
+                        </DropdownMenuItem>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem onClick={() => column.toggleVisibility(false)}>
+                            Hide
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+            )
+        },
+    },
+
     {
         id: "actions",
         cell: ({ row }) => {

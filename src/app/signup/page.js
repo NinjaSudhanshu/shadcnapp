@@ -24,6 +24,7 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const formSchema = z.object({
     firstName: z.string().min(2).max(50),
@@ -34,6 +35,7 @@ const formSchema = z.object({
 
 export default function Page() {
     const router = useRouter();
+    const [userdata, setUserdata] = useState()
 
     // const router = useRouter()
     // 1. Define your form.
@@ -51,8 +53,12 @@ export default function Page() {
     function onSubmit(values) {
         // Do something with the form values.
         console.log(values);
-        router.push("/")
+        setUserdata(values)
+        router.push("/enter-otp")
     }
+    useEffect(() => {
+        console.log(userdata)
+    }, [userdata])
 
     return (
         <main className="flex h-screen justify-center items-center">
@@ -114,7 +120,7 @@ export default function Page() {
                                         )}
                                     />
                                 </div>
-                                <div className="grid gap-2">
+                                <div className="grid gap-2 mb-4">
                                     <FormField
                                         control={form.control}
                                         name="password"
@@ -128,23 +134,23 @@ export default function Page() {
                                             </FormItem>
                                         )}
                                     />
-                                    <Button type="submit" className="w-full">
+                                    <Button type="submit" className="w-full mt-4">
                                         Create an account
                                     </Button>
-                                    <Button variant="outline" className="w-full">
+                                    <Button variant="outline" className="w-full ">
                                         Sign up with Google
                                     </Button>
                                 </div>
                             </form>
                         </Form>
                     </div>
-                    <div className="mt-4 text-center text-sm">
+                    <div className="mt-4 text-center text-sm flex justify-center">
                         Already have an account?
                         <div
                             // href="/login"
 
                             onClick={() => router.push("/login")}
-                            className="underline cursor-pointer"
+                            className="underline cursor-pointer ml-2"
                         >
                             Sign in
                         </div>

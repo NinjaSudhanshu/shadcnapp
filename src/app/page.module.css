@@ -1,0 +1,19 @@
+.mainclass {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px;
+    margin-right: 12px;
+
+
+}
+
+.mainclass h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.buttonbox {
+    margin-right: 22px;
+    display: flex;
+    gap: 16px;
+}

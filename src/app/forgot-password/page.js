@@ -26,10 +26,10 @@ import {
 import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
-    firstName: z.string().min(2).max(50),
-    lastName: z.string().min(2).max(50),
+    // firstName: z.string().min(2).max(50),
+    // lastName: z.string().min(2).max(50),
     email: z.string().email(),
-    password: z.string().min(8).max(50),
+    // password: z.string().min(8).max(50),
 });
 
 export default function Page() {
@@ -39,10 +39,10 @@ export default function Page() {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            firstName: "",
-            lastName: "",
+            // firstName: "",
+            // lastName: "",
             email: "",
-            password: "",
+            // password: "",
         },
     });
 
@@ -58,8 +58,13 @@ export default function Page() {
 
             >
                 <CardHeader>
-                    <CardTitle className="text-2xl font-bold">Log In</CardTitle>
+                    <CardTitle className="text-2xl font-bold ">Forgot Password</CardTitle>
+                    <div className="text-[16px] mt-[4px]">
+                        Please enter your email below and we will send you link to your email to change your password.
+                    </div>
                 </CardHeader>
+
+
                 <CardContent>
                     <div className="grid gap-6">
                         <Form {...form}>
@@ -84,49 +89,24 @@ export default function Page() {
                                             </FormItem>
                                         )}
                                     />
-                                    <FormField
-                                        control={form.control}
-                                        name="password"
-                                        render={({ field }) => (
-                                            <FormItem>
-                                                <FormLabel className="text-lg font-medium">Password</FormLabel>
-                                                <FormControl>
-                                                    <Input
-                                                        placeholder="Enter your password"
-                                                        {...field}
-                                                        className="w-full py-3 px-4 text-lg"
-                                                    />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
-                                    />
+                             
                                     <Button type="submit" className="w-full py-3 text-lg">
-                                        Log In
+                                        Reset Password
                                     </Button>
-                                    <div className="flex justify-end cursor-pointer underline" onClick={() => { router.push("/forgot-password") }}>
-                                        Forgot Your Password ?
-                                    </div>
-                                    <Button
-                                        type="button"
-                                        variant="outline"
-                                        className="w-full py-3 text-md"
-                                        onClick={() => { router.push("/home") }}
-                                    >
-                                        Sign in with Google
-                                    </Button>
+                                  
                                 </div>
                             </form>
                         </Form>
                     </div>
-                    <div className="mt-6 text-center text-md flex gap-2 justify-center">
-                        Create an account ?{" "}
+                    <div className="mt-6 text-center text-md flex justify-center">
+                        {/* Create an account?{" "} */}
+                        Already have an account ?
                         <div
                             // href="/signup"
-                            onClick={() => router.push("/signup")}
+                            onClick={() => router.push("/login")}
                             className="underline cursor-pointer"
                         >
-                            Sign Up
+                            Log In
                         </div>
                     </div>
                 </CardContent>

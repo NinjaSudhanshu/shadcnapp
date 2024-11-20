@@ -61,9 +61,9 @@ const data = {
         {
           title: "Dashboard",
           url: "/home",
-          onClick: () => {
-            console.log("Navigating to General")
-          }, 
+          // onClick: () => {
+          //   console.log("Navigating to General")
+          // }, 
         },
         // {
         //   title: "Starred",

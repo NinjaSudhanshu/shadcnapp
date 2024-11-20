@@ -1,7 +1,7 @@
 
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
-import styles from './page.module.css'
+import styles from "./page.module.css"
 
 async function getData() {
     // Fetch data from your API here.
@@ -42,12 +42,13 @@ async function getData() {
 
 export default async function DemoPage() {
     const data = await getData();
+    console.log(data.length)
 
     return (
         <div className={styles.tableparent}>
             <div className={styles.tableheading}>
                 <h1>Welcome Back!</h1>
-                <h3>Here's a list of your tasks for this month!</h3>
+                <h3>{`Here's a list of your tasks for this month!`}</h3>
             </div>
             <DataTable columns={columns} data={data} />
         </div>

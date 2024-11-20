@@ -13,9 +13,9 @@ const RecentSales = () => {
     ];
 
     return (
-        <div className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-black text-black dark:text-white p-6 rounded-lg">
-            <h2 className="text-xl font-semibold mb-3">Recent Sales</h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">You made 265 sales this month.</p>
+        <div className="border border-gray-200 dark:border-gray-700  text-black dark:text-white p-6 rounded-lg">
+            <h2 className="text-xl font-semibold mb-1">Recent Sales</h2>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">You made 265 sales this month.</p>
             <ul className="space-y-5">
                 {salesData.map((sale, index) => (
                     <li key={index} className="flex items-center justify-between">

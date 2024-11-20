@@ -133,8 +133,8 @@ const data = {
             console.log("Navigating to General")
           },        },
         // {
-        //   title: "Team",
-        //   url: "#",
+        //   title: "Advanced",
+        //   url: "/settings/advanced",
         // },
         // {
         //   title: "Billing",

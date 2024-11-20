@@ -12,7 +12,7 @@ const Page = () => {
     return (
         <div className="flex flex-col gap-5 w-full max-w-screen-2xl mx-auto min-h-screen p-6">
             <h1 className="text-2xl font-semibold">Dashboard</h1>
-            <div className='min-w-[1440px]'>
+            <div >
                 <DashboardCard />
             </div>
             <div>

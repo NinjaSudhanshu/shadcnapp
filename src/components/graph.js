@@ -59,7 +59,8 @@ const Chartcode = () => {
                 label: 'Revenue',
                 data: [1500, 3000, 5000, 6000, 4500, 1000, 3500, 4000, 1500, 4500, 5500, 4000],
                 // Dynamically set the bar color based on theme using CSS variable
-                backgroundColor: 'var(--color-revenue)',
+                // backgroundColor: 'var(--color-revenue)',
+                backgroundColor: '#ffff'
             },
         ],
     };
@@ -73,7 +74,9 @@ const Chartcode = () => {
             title: {
                 display: true,
                 text: 'Overview',
-                color: 'var(--color-text)', // Title text color
+                // color: 'var(--color-text)', // Title text color
+                color: '#ffff',
+
                 font: {
                     size: 16,
                 },
@@ -82,12 +85,14 @@ const Chartcode = () => {
         scales: {
             x: {
                 ticks: {
-                    color: 'var(--color-text)', // X-axis ticks color
+                    // color: 'var(--color-text)', // X-axis ticks color
+                    color: '#ffff'
                 },
             },
             y: {
                 ticks: {
-                    color: 'var(--color-text)', // Y-axis ticks color
+                    color: '#ffff',
+                    // color: 'var(--color-text)', // Y-axis ticks color
                     callback: (value) => `$${value}`,
                 },
             },

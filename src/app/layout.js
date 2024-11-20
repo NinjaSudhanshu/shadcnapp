@@ -26,7 +26,8 @@ export default function RootLayout({ children }) {
   const showSidebar =
     pathname.startsWith("/home") ||
     pathname.startsWith("/settings") ||
-    pathname.startsWith("/tables");
+    pathname.startsWith("/tables") ||
+    pathname.startsWith("/music")
 
   return (
     <html lang="en" suppressHydrationWarning>

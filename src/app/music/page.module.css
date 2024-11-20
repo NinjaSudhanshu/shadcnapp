@@ -1,0 +1,61 @@
+.menuBarContainer {
+    width: fit-content;
+    min-width: min-content;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.MusicPage {
+    margin: 22px;
+    padding: 16px;
+}
+
+.navBar {
+    display: flex;
+    background-color: #2a2a39;
+    width: fit-content;
+    border-radius: 6px;
+    padding: 3px;
+    margin-bottom: 18px;
+
+
+}
+
+.navButton {
+    background-color: #0a0a1a;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+
+}
+
+.normalButton {
+    padding: 4px 8px;
+    cursor: pointer;
+    color: #a4a5a7;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+
+}
+
+.musicpageheadertext h2 {
+    margin-top: 32px;
+    margin-bottom: 4px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    letter-spacing: -.025rem;
+}
+
+.musicpageheadertext p {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #a4a5a7;
+}

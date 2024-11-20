@@ -246,3 +246,9 @@ body {
 .mainclass h1 {
   font-size: 24px;
 }
+
+.horizontalLine {
+  height: 1px;
+  width: 100%;
+  background-color: #2a2a39;
+}

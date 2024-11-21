@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const MusicSelect = () => {
@@ -19,7 +20,7 @@ const MusicSelect = () => {
                         musicAlbum.map((gallery, index) => {
                             return (
                                 <div className='overflow-hidden rounded-md w-[150px]' key={index}>
-                                    <img
+                                    <Image
                                         width={130}
                                         height={130}
                                         src={gallery.imgsrc}

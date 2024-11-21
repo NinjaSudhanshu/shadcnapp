@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./page.module.css"
+import Image from 'next/image'
 
 const MusicAlbum = () => {
     const imageGallery = [
@@ -16,7 +17,7 @@ const MusicAlbum = () => {
                     imageGallery.map((gallery, index) => {
                         return (
                             <div className='overflow-hidden rounded-md w-[250px]' key={index}>
-                                <img
+                                <Image
                                     width={250}
                                     height={330}
                                     src={gallery.imgsrc}

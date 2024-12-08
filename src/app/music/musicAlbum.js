@@ -12,7 +12,7 @@ const MusicAlbum = () => {
 
     return (
         <div className='w-full overflow-x-auto'>
-            <div className="flex flex-nowrap gap-6 p-8">
+            <div className="flex flex-nowrap gap-6 ">
                 {
                     imageGallery.map((gallery, index) => {
                         return (
